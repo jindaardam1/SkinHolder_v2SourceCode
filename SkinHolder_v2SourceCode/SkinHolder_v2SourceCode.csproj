@@ -11,7 +11,6 @@
       <Folder Include="Resources\" />
       <Folder Include="src\Controllers\" />
       <Folder Include="src\Models\" />
-      <Folder Include="src\Utils\" />
       <Folder Include="src\Views\" />
     </ItemGroup>
 
