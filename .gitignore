@@ -1,0 +1,12 @@
+# Rider
+.idea/
+
+# Compiled output
+bin/
+obj/
+
+# EditorConfig file
+analysislevel_7_default.editorconfig
+
+# Optional: Dependencies folder (si deseas incluir las dependencias en el repositorio, quita esta línea)
+Dependencies/
