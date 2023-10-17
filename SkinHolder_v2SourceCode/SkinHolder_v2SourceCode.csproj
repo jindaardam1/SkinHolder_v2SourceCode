@@ -8,10 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Resources\" />
       <Folder Include="src\Controllers\" />
       <Folder Include="src\Models\" />
-      <Folder Include="src\Views\" />
     </ItemGroup>
 
     <ItemGroup>

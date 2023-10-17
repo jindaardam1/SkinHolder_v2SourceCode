@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Threading;
 using SkinHolder_v2SourceCode.Utils;
+using SkinHolder_v2SourceCode.Views;
 
 namespace SkinHolder_v2SourceCode.Application
 {
