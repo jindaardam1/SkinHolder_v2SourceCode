@@ -13,9 +13,8 @@ namespace SkinHolder_v2SourceCode.Application
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
-            
             CrearRecursosNecesarios.CreacionRecursos();
+            base.OnStartup(e);
         }
     }
 }

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             Background="#222222">
+             Background="#333333">
     <UserControl.Width>
         <Binding Path="ActualWidth" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
     </UserControl.Width>
@@ -36,5 +36,24 @@
                    Foreground="#B8D600"
                    FontFamily="Counter-Strike"
                    FontSize="20"/>
+        <Border BorderBrush="White" BorderThickness="2" CornerRadius="5" Width="400" Height="15" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 150">
+            <Border Width="400" Height="50" Background="#B8D600" CornerRadius="5">
+                <Border.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" From="0" To="400" Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Border.Triggers>
+            </Border>
+
+        </Border>
+
+
+
+
+
     </Grid>
 </UserControl>
