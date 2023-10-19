@@ -24,7 +24,7 @@ namespace SkinHolder_v2SourceCode.Application
 
             var timer = new System.Windows.Threading.DispatcherTimer
             {
-                Interval = TimeSpan.FromSeconds(0.85)
+                Interval = TimeSpan.FromSeconds(20)
             };
             timer.Tick += (sender, e) =>
             {

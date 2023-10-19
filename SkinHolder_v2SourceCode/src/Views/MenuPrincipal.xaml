@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="SkinHolder_v2SourceCode.Views.MenuPrincipal"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Height="700" Width="1000" Background="LimeGreen">
+             Height="700" Width="1000" Background="#222222">
     <Grid>
         
     </Grid>

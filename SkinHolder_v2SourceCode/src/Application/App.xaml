@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="/src/Application/MainWindow.xaml">
     <Application.Resources>
-        
+        <FontFamily x:Key="CsTipo">/Fonts/#CSTipografia</FontFamily>
     </Application.Resources>
 </Application>
