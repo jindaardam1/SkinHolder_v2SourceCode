@@ -86,6 +86,13 @@
             
         </Grid>
         
+        <TextBlock Grid.Row="1" Grid.Column="1" Name="TextBlockPing" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+                   FontFamily="Counter-Strike" FontSize="20" Margin="10" Foreground="#B8D600" Loaded="TextBlockPing_OnLoaded">
+            <TextBlock.ToolTip>
+                <ToolTip Content="Host: www.xe.com" Placement="Top" Background="White" Foreground="Black"/>
+            </TextBlock.ToolTip>
+        </TextBlock>
+        
     </Grid>
     
 </UserControl>

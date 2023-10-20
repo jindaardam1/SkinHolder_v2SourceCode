@@ -9,8 +9,6 @@
 
     <ItemGroup>
       <Folder Include="bin\Debug\net7.0-windows\" />
-      <Folder Include="src\Controllers\" />
-      <Folder Include="src\Models\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -107,6 +105,10 @@
       <None Remove="obj\**" />
       <None Include="bin\Debug\net7.0-windows\Resources\Icons\MainWindow\SH.ico" />
       <None Include="bin\Debug\net7.0-windows\Resources\Tipografia\CSTipografia.ttf" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HtmlAgilityPack" Version="1.11.54" />
     </ItemGroup>
 
 </Project>
