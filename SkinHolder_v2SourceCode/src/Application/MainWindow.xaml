@@ -6,7 +6,8 @@
         mc:Ignorable="d"
         Title="SkinHolder v2.0.0" Width="1000" Height="700"
         ResizeMode="NoResize, CanMinimize"
-        ShowInTaskbar="False">
+        ShowInTaskbar="False"
+        KeyDown="CerrarConEscape">
     <Grid>
         <Frame x:Name="MainContent" NavigationUIVisibility="Hidden"/>
     </Grid>

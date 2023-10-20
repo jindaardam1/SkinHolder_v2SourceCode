@@ -8,11 +8,23 @@
     <UserControl.Height>
         <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
     </UserControl.Height>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="100"/>
-        </Grid.ColumnDefinitions>
-    </Grid>
+        <Label BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="LimeGreen">
+            <Grid Background="#444444" Loaded="Grid_Loaded">
+                <Grid.Width>
+                    <Binding Path="ActualWidth" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
+                </Grid.Width>
+                <Grid.Height>
+                    <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
+                </Grid.Height>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Label>
 </UserControl>
