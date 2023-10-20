@@ -2,29 +2,90 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Background="#333333">
+    
     <UserControl.Width>
         <Binding Path="ActualWidth" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
     </UserControl.Width>
     <UserControl.Height>
         <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
     </UserControl.Height>
-        <Label BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="LimeGreen">
-            <Grid Background="#444444" Loaded="Grid_Loaded">
-                <Grid.Width>
-                    <Binding Path="ActualWidth" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
-                </Grid.Width>
-                <Grid.Height>
-                    <Binding Path="ActualHeight" RelativeSource="{RelativeSource FindAncestor, AncestorType={x:Type Window}}" />
-                </Grid.Height>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                </Grid.RowDefinitions>
+    
+    <Grid Background="#444444">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid Name="GridBarraSuperior" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" Background="#555555">
+                
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                
+            <Grid Grid.Column="0" Name="GridValorEnSteam" Margin="10" Background="Black" Loaded="GridValorEnSteam_OnLoaded">
+                
             </Grid>
-        </Label>
+            
+            <Label Grid.Column="1" Background="#B8D600" Margin="0, 15, 0, 15"/>
+            
+            <Grid Grid.Column="2" Name="GridValorEnBuff" Margin="10" Background="Black" Loaded="GridValorEnBuff_OnLoaded">
+
+            </Grid>
+            
+            <Label Grid.Column="3" Background="#B8D600" Margin="0, 15, 0, 15"/>
+            
+            <Grid Grid.Column="4" Name="GridCambioYuanes" Margin="10" Background="Black" Loaded="GridCambioYuanes_OnLoaded">
+                
+            </Grid>
+            
+        </Grid>
+        
+        <Grid Name="GridBarraMenuIzquierda" Grid.Column="0" Grid.Row="1" Background="#555555">
+                
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+                
+            <Grid Grid.Row="0" Margin="13" Background="Black">
+                
+            </Grid>
+            
+            <Label Grid.Row="1" Background="#B8D600" Margin="20, 0, 20, 0"/>
+            
+            <Grid Grid.Row="2" Margin="13" Background="Black">
+
+            </Grid>
+            
+            <Label Grid.Row="3" Background="#B8D600" Margin="20, 0, 20, 0"/>
+            
+            <Grid Grid.Row="4" Margin="13" Background="Black">
+                
+            </Grid>
+            
+            <Label Grid.Row="5" Background="#B8D600" Margin="20, 0, 20, 0"/>
+            
+            <Grid Grid.Row="6" Margin="13" Background="Black">
+                
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
+    
 </UserControl>
