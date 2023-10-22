@@ -44,7 +44,16 @@
             
             <Label Grid.Column="3" Background="#B8D600" Margin="0, 15, 0, 15"/>
             
-            <Grid Grid.Column="4" Name="GridCambioYuanes" Margin="10" Background="Black" Loaded="GridCambioYuanes_OnLoaded">
+            <Grid Grid.Column="4" Name="GridCambioYuanes" Margin="10" Loaded="GridCambioYuanes_OnLoaded">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Grid.Row="0" Name="YuanesAEuros" FontFamily="Counter-Strike" FontSize="20"
+                           VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke"/>
+                <TextBlock Grid.Row="1" Name="EurosAYuanes" FontFamily="Counter-Strike" FontSize="20"
+                           VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke"/>
                 
             </Grid>
             

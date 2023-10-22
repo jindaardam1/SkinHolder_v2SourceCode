@@ -3,6 +3,7 @@ using System.Net;
 using System.IO;
 using System.Net.Http;
 using System.Net.NetworkInformation;
+using System.Threading.Tasks;
 using HtmlAgilityPack;
 
 namespace SkinHolder_v2SourceCode.Utils;
@@ -33,36 +34,33 @@ public class Conexiones
         return -1;
     }
 
-    public static string? GetCodigoFuente(string url)
+    public static string GetCodigoFuente(string url)
     {
         try
         {
-            using (var client = new HttpClient())
+            using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3");
+                // Realiza una solicitud HTTP GET a la URL proporcionada
+                HttpResponseMessage response = client.GetAsync(url).Result; // Espera sincrónicamente
 
-                var response = client.GetAsync(url).Result;
-
+                // Verifica si la solicitud fue exitosa (código de estado 200)
                 if (response.IsSuccessStatusCode)
                 {
-                    var html = response.Content.ReadAsStringAsync().Result;
-
-                    var htmlDocument = new HtmlDocument();
-                    htmlDocument.LoadHtml(html);
-
-                    return htmlDocument.DocumentNode.OuterHtml;
+                    // Lee el contenido de la respuesta como una cadena
+                    string codigoFuente = response.Content.ReadAsStringAsync().Result; // Espera sincrónicamente
+                    return codigoFuente;
                 }
                 else
                 {
-                    Logs.ErrorLogManager("No se pudo obtener una respuesta válida del servidor. Código de estado: " + (int)response.StatusCode);
-                    return null;
+                    Console.WriteLine($"La solicitud a {url} no fue exitosa. Código de estado: {response.StatusCode}");
                 }
             }
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
-            Logs.ErrorLogManager(e);
-            return null;
+            Console.WriteLine($"Error al obtener el código fuente: {ex.Message}");
         }
+
+        return null; // Si ocurre algún error, devuelve null
     }
 }

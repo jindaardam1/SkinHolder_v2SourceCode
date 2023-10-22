@@ -27,7 +27,8 @@ public partial class MenuPrincipal
 
     private void GridCambioYuanes_OnLoaded(object sender, RoutedEventArgs e)
     {
-        
+        YuanesAEuros.Text = "1 Yuan = " + MenuPrincipalController.GetYuanesAEuros() + " euros";
+        EurosAYuanes.Text = "1 Euro = " + MenuPrincipalController.GetEurosAYuanes() + " yuanes";
     }
 
     private void TextBlockPing_OnLoaded(object sender, RoutedEventArgs e)
